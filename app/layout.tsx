@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 
+const resolvedAppUrl = process.env.APP_URL;
+const absoluteOgImage = resolvedAppUrl
+  ? new URL("/opengraph-image", resolvedAppUrl).toString()
+  : "/opengraph-image";
+const absoluteTwitterImage = resolvedAppUrl
+  ? new URL("/twitter-image", resolvedAppUrl).toString()
+  : "/twitter-image";
+
 export const metadata: Metadata = {
-  metadataBase: process.env.APP_URL ? new URL(process.env.APP_URL) : undefined,
+  metadataBase: resolvedAppUrl ? new URL(resolvedAppUrl) : undefined,
   title: "Calculadora DPS - Ragnarok Online",
   description: "Calcula el DPS de skills de Ragnarok Online con presets y parámetros personalizados.",
   icons: {
@@ -12,9 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Calculadora DPS - Ragnarok Online",
     description: "Calcula el DPS de skills de Ragnarok Online con presets y parámetros personalizados.",
+    url: resolvedAppUrl ?? undefined,
     images: [
       {
-        url: "/opengraph-image",
+        url: absoluteOgImage,
         width: 1200,
         height: 630,
         alt: "ROLA Replays - Ragnarok Online LATAM replay analyzer",
@@ -25,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Calculadora DPS - Ragnarok Online",
     description: "Calcula el DPS de skills de Ragnarok Online con presets y parámetros personalizados.",
-    images: ["/twitter-image"],
+    images: [absoluteTwitterImage],
   },
 };
 
