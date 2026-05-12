@@ -383,7 +383,7 @@ export default function DpsCalculator() {
                       ?
                     </button>
                     <span className="helpTooltip" role="tooltip">
-                      Reducciones gobales y de skill que tiene tu personaje, puedes verlo en tu equipo.
+                      Reducciones globales y de skill que tiene tu personaje, puedes verlo en tu equipo.
                     </span>
                   </span>
                 ) : null}
