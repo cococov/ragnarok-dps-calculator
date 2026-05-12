@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: process.env.APP_URL ? new URL(process.env.APP_URL) : undefined,
   title: "Calculadora DPS - Ragnarok Online",
   description: "Calcula el DPS de skills de Ragnarok Online con presets y parámetros personalizados.",
   icons: {
