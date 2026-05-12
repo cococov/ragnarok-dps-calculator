@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 
-const resolvedAppUrl = process.env.APP_URL;
+const resolvedAppUrl = process.env.APP_URL ?? "https://dps.rolatools.com";
 const absoluteOgImage = resolvedAppUrl
   ? new URL("/opengraph-image", resolvedAppUrl).toString()
   : "/opengraph-image";
