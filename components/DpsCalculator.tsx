@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { calculateDps, type SkillTimingInput } from "@/lib/dps";
 import { skillPresets } from "@/lib/skills";
 
@@ -15,6 +15,7 @@ type CalculatorInput = Omit<SkillTimingInput, "dex" | "int" | "magicStrings"> & 
 type NumericField = keyof CalculatorInput;
 
 const CUSTOM_SKILL_ID = "custom-skill";
+const CUSTOM_SKILL_ICON_URL = "https://irowiki.org/w/images/e/ed/Basic_Skill.png";
 const skillTimingFields: NumericField[] = ["variableCast", "fixedCast", "postCast", "cooldown"];
 
 const initialInput: CalculatorInput = {
@@ -123,6 +124,8 @@ export default function DpsCalculator() {
   const [selectedSkillId, setSelectedSkillId] = useState(CUSTOM_SKILL_ID);
   const [input, setInput] = useState<CalculatorInput>(initialInput);
   const [magicStrings, setMagicStrings] = useState(false);
+  const [mobilePresetOpen, setMobilePresetOpen] = useState(false);
+  const mobilePresetRef = useRef<HTMLDivElement | null>(null);
   const timingInput = useMemo<SkillTimingInput>(
     () => ({
       ...input,
@@ -144,6 +147,16 @@ export default function DpsCalculator() {
     document.documentElement.style.colorScheme = theme;
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    const onPointerDown = (event: MouseEvent) => {
+      if (!mobilePresetRef.current?.contains(event.target as Node)) {
+        setMobilePresetOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    return () => document.removeEventListener("mousedown", onPointerDown);
+  }, []);
 
   const setField = (key: NumericField, rawValue: string) => {
     if (!isCustomSkill && skillTimingFields.includes(key)) return;
@@ -208,7 +221,64 @@ export default function DpsCalculator() {
           <div className="panelHeader">
             <div>
               <h2>Presets</h2>
-              <p>{selectedSkill?.name ?? "Skill libre"}</p>
+              <p>{selectedSkill?.name ?? "Skill Libre"}</p>
+            </div>
+          </div>
+
+          <div className="presetSelectWrap">
+            <div className="field" ref={mobilePresetRef}>
+              <span>Selecciona una skill</span>
+              <button
+                aria-expanded={mobilePresetOpen}
+                aria-haspopup="listbox"
+                className="presetSelectTrigger"
+                onClick={() => setMobilePresetOpen((current) => !current)}
+                type="button"
+              >
+                {isCustomSkill ? (
+                  <Image src={CUSTOM_SKILL_ICON_URL} alt="" className="customPresetIcon" width={22} height={22} />
+                ) : (
+                  <Image src={selectedSkill?.iconUrl ?? ""} alt="" width={22} height={22} />
+                )}
+                <span>{selectedSkill?.name ?? "Skill Libre"}</span>
+              </button>
+              {mobilePresetOpen ? (
+                <div className="presetSelectMenu" role="listbox">
+                  <button
+                    className={isCustomSkill ? "presetSelectOption active" : "presetSelectOption"}
+                    onClick={() => {
+                      applyCustomSkill();
+                      setMobilePresetOpen(false);
+                    }}
+                    role="option"
+                    type="button"
+                  >
+                    <Image
+                      src={CUSTOM_SKILL_ICON_URL}
+                      alt=""
+                      className="customPresetIcon"
+                      width={22}
+                      height={22}
+                    />
+                    <span>Skill Libre</span>
+                  </button>
+                  {skillPresets.map((skill) => (
+                    <button
+                      className={skill.id === selectedSkillId ? "presetSelectOption active" : "presetSelectOption"}
+                      key={skill.id}
+                      onClick={() => {
+                        applyPreset(skill.id);
+                        setMobilePresetOpen(false);
+                      }}
+                      role="option"
+                      type="button"
+                    >
+                      <Image src={skill.iconUrl} alt="" width={22} height={22} />
+                      <span>{skill.name}</span>
+                    </button>
+                  ))}
+                </div>
+              ) : null}
             </div>
           </div>
 
@@ -216,11 +286,11 @@ export default function DpsCalculator() {
             <button
               className={isCustomSkill ? "presetButton active" : "presetButton"}
               onClick={applyCustomSkill}
-              title="Skill libre"
+              title="Skill Libre"
               type="button"
             >
-              <span className="customPresetIcon">0</span>
-              <span>Skill libre</span>
+              <Image src={CUSTOM_SKILL_ICON_URL} alt="" className="customPresetIcon" width={44} height={44} />
+              <span>Skill Libre</span>
             </button>
             {skillPresets.map((skill) => (
               <button

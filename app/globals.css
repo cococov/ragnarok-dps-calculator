@@ -245,6 +245,68 @@ h2 {
   gap: 10px;
 }
 
+.presetSelectWrap {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.presetSelectTrigger {
+  align-items: center;
+  background: color-mix(in srgb, var(--panel-2) 88%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
+  border-radius: var(--radius);
+  box-shadow: none;
+  color: var(--text);
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 44px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.presetSelectTrigger img {
+  border-radius: 4px;
+}
+
+.presetSelectMenu {
+  background: color-mix(in srgb, var(--panel) 96%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+  max-height: 280px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.presetSelectOption {
+  align-items: center;
+  background: color-mix(in srgb, var(--panel-2) 86%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
+  border-radius: var(--radius);
+  box-shadow: none;
+  color: var(--text);
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 40px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.presetSelectOption.active,
+.presetSelectOption:hover {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: var(--accent);
+}
+
+.presetSelectOption img {
+  border-radius: 4px;
+}
+
 .presetButton {
   align-items: center;
   background: color-mix(in srgb, var(--panel-2) 88%, transparent);
@@ -271,17 +333,11 @@ h2 {
 }
 
 .customPresetIcon {
-  align-items: center;
   background: var(--panel-3);
   border: 1px solid var(--line);
   border-radius: 6px;
-  color: var(--accent-strong);
-  display: flex;
-  font-size: 1rem;
-  font-weight: 900;
-  height: 44px;
-  justify-content: center;
-  width: 44px;
+  display: block;
+  object-fit: cover;
 }
 
 .presetButton span {
@@ -575,6 +631,14 @@ h2 {
   .workspace {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .presetSelectWrap {
+    display: block;
+  }
+
+  .presetGrid {
+    display: none;
   }
 
   .presetGrid,
