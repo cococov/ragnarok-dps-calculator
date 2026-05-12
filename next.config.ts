@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "browiki.org",
         pathname: "/images/**",
       },
+      {
+        protocol: "https",
+        hostname: "irowiki.org",
+        pathname: "/w/images/**",
+      },
     ],
   },
 };
