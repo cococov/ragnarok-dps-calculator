@@ -2,8 +2,8 @@ import { ImageResponse } from "next/og";
 
 export const alt = "ROLA Replays - Ragnarok Online LATAM replay analyzer";
 export const size = {
-  width: 1200,
-  height: 630,
+  width: 512,
+  height: 512,
 };
 export const contentType = "image/png";
 
@@ -16,20 +16,17 @@ export default function Image() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "linear-gradient(160deg, #100d18 0%, #171321 55%, #120f1a 100%)",
+        background: "transparent",
       }}
     >
       <div
         style={{
-          width: 360,
-          height: 360,
+          width: 220,
+          height: 220,
           display: "flex",
-          borderRadius: 72,
-          boxShadow: "0 20px 60px rgba(0, 0, 0, 0.35)",
-          overflow: "hidden",
         }}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="360" height="360">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="220" height="220">
           <rect width="64" height="64" rx="12" fill="#0d0b12" />
           <rect x="10" y="10" width="44" height="44" rx="8" fill="#171021" />
           <path d="M15 16h34" stroke="#7d42ee" strokeWidth="2.5" strokeLinecap="round" />
