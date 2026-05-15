@@ -136,6 +136,15 @@ export const skillPresets: SkillPreset[] = [
     cooldown: 3,
   },
   {
+    id: "arbitrium",
+    name: "Arbitrium",
+    iconUrl: "https://irowiki.org/w/images/a/a0/Arbitrium.png",
+    variableCast: 4,
+    fixedCast: 1.5,
+    postCast: 0.5,
+    cooldown: 3,
+  },
+  {
     id: "picky-peck",
     name: "Picky Peck",
     iconUrl: "https://browiki.org/images/7/71/Chilique_de_Picky.png",
