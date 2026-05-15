@@ -129,7 +129,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "flamen",
     name: "Flamen",
-    iconUrl: "https://irowiki.org/w/images/5/5c/Framen.png",
+    iconUrl: "https://irowiki.org/w/images/e/e6/Flamen.png",
     variableCast: 5,
     fixedCast: 1.5,
     postCast: 1,
@@ -138,7 +138,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "arbitrium",
     name: "Arbitrium",
-    iconUrl: "https://irowiki.org/w/images/a/a0/Arbitrium.png",
+    iconUrl: "https://irowiki.org/w/images/4/42/Arbitrium.png",
     variableCast: 4,
     fixedCast: 1.5,
     postCast: 0.5,
