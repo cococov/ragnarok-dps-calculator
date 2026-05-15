@@ -28,6 +28,15 @@ export const skillPresets: SkillPreset[] = [
     cooldown: 1,
   },
   {
+    id: "crescive-bolt",
+    name: "Crescive Bolt",
+    iconUrl: "https://irowiki.org/w/images/9/98/Crescive_Bolt.png",
+    variableCast: 1,
+    fixedCast: 1,
+    postCast: 0.7,
+    cooldown: 0.35,
+  },
+  {
     id: "wind-cutter",
     name: "Wind Cutter",
     iconUrl: "https://browiki.org/images/7/7f/Vento_Cortante.png",
