@@ -24,8 +24,8 @@ export const skillPresets: SkillPreset[] = [
     iconUrl: "https://browiki.org/images/b/bc/Disparo_Certeiro.png",
     variableCast: 2,
     fixedCast: 1,
-    postCast: 2,
-    cooldown: 1,
+    postCast: 0.5,
+    cooldown: 0.15,
   },
   {
     id: "crescive-bolt",
