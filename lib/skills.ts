@@ -24,8 +24,8 @@ export const skillPresets: SkillPreset[] = [
     iconUrl: "https://browiki.org/images/b/bc/Disparo_Certeiro.png",
     variableCast: 2,
     fixedCast: 1,
-    postCast: 0.5,
-    cooldown: 0.15,
+    postCast: 2,
+    cooldown: 1,
   },
   {
     id: "crescive-bolt",
@@ -33,8 +33,8 @@ export const skillPresets: SkillPreset[] = [
     iconUrl: "https://irowiki.org/w/images/9/98/Crescive_Bolt.png",
     variableCast: 1,
     fixedCast: 1,
-    postCast: 0.7,
-    cooldown: 0.35,
+    postCast: 0.5,
+    cooldown: 0.15,
   },
   {
     id: "wind-cutter",
