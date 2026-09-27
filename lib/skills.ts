@@ -12,7 +12,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "focused-arrow-strike",
     name: "Focused Arrow Strike",
-    iconUrl: "https://browiki.org/images/6/6f/Tiro_Preciso.png",
+    iconUrl: "/skill-icons/focused-arrow-strike.png",
     variableCast: 0.5,
     fixedCast: 0.5,
     postCast: 0.5,
@@ -21,7 +21,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "aimed-bolt",
     name: "Aimed Bolt",
-    iconUrl: "https://browiki.org/images/b/bc/Disparo_Certeiro.png",
+    iconUrl: "/skill-icons/aimed-bolt.png",
     variableCast: 2,
     fixedCast: 1,
     postCast: 2,
@@ -30,7 +30,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "crescive-bolt",
     name: "Crescive Bolt",
-    iconUrl: "https://irowiki.org/w/images/9/98/Crescive_Bolt.png",
+    iconUrl: "/skill-icons/crescive-bolt.png",
     variableCast: 1,
     fixedCast: 1,
     postCast: 0.5,
@@ -39,7 +39,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "wind-cutter",
     name: "Wind Cutter",
-    iconUrl: "https://browiki.org/images/7/7f/Vento_Cortante.png",
+    iconUrl: "/skill-icons/wind-cutter.png",
     variableCast: 0,
     fixedCast: 0,
     postCast: 0.5,
@@ -48,7 +48,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "sonic-wave",
     name: "Sonic Wave",
-    iconUrl: "https://irowiki.org/w/images/7/74/Sonic_Wave.png",
+    iconUrl: "/skill-icons/sonic-wave.png",
     variableCast: 0,
     fixedCast: 0,
     postCast: 0.5,
@@ -57,7 +57,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "ignition-break",
     name: "Ignition Break",
-    iconUrl: "https://irowiki.org/w/images/f/f2/Ignition_Break.png",
+    iconUrl: "/skill-icons/ignition-break.png",
     variableCast: 1,
     fixedCast: 0,
     postCast: 0,
@@ -66,7 +66,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "overbrand",
     name: "Overbrand",
-    iconUrl: "https://browiki.org/images/7/77/Lan%C3%A7a_do_Destino.png",
+    iconUrl: "/skill-icons/overbrand.png",
     variableCast: 0,
     fixedCast: 0.5,
     postCast: 1,
@@ -75,7 +75,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "rolling-cutter",
     name: "Rolling Cutter",
-    iconUrl: "https://browiki.org/images/1/12/L%C3%A2minas_de_Loki.png",
+    iconUrl: "/skill-icons/rolling-cutter.png",
     variableCast: 0,
     fixedCast: 0,
     postCast: 0.2,
@@ -84,7 +84,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "cross-impact",
     name: "Cross Impact",
-    iconUrl: "https://browiki.org/images/1/16/L%C3%A2minas_Retalhadoras.png",
+    iconUrl: "/skill-icons/cross-impact.png",
     variableCast: 0,
     fixedCast: 0,
     postCast: 0.5,
@@ -93,7 +93,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "fatal-menace",
     name: "Fatal Menace",
-    iconUrl: "https://browiki.org/images/9/90/Ofensiva_Fatal.png",
+    iconUrl: "/skill-icons/fatal-menace.png",
     variableCast: 0,
     fixedCast: 0,
     postCast: 0.5,
@@ -102,7 +102,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "triple-shot",
     name: "Triple Shot",
-    iconUrl: "https://browiki.org/images/2/24/Disparo_Triplo.png",
+    iconUrl: "/skill-icons/triple-shot.png",
     variableCast: 0,
     fixedCast: 0,
     postCast: 0.35,
@@ -111,7 +111,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "cart-cannon",
     name: "Cart Cannon",
-    iconUrl: "https://browiki.org/images/6/6d/Canh%C3%A3o_de_Pr%C3%B3tons.png",
+    iconUrl: "/skill-icons/cart-cannon.png",
     variableCast: 3,
     fixedCast: 0,
     postCast: 0.5,
@@ -120,7 +120,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "adoramus",
     name: "Adoramus",
-    iconUrl: "https://browiki.org/images/4/4f/Adoramus.png",
+    iconUrl: "/skill-icons/adoramus.png",
     variableCast: 2,
     fixedCast: 0.5,
     postCast: 0.5,
@@ -129,7 +129,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "flamen",
     name: "Flamen",
-    iconUrl: "https://irowiki.org/w/images/e/e6/Flamen.png",
+    iconUrl: "/skill-icons/flamen.png",
     variableCast: 5,
     fixedCast: 1.5,
     postCast: 1,
@@ -138,7 +138,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "arbitrium",
     name: "Arbitrium",
-    iconUrl: "https://irowiki.org/w/images/4/42/Arbitrium.png",
+    iconUrl: "/skill-icons/arbitrium.png",
     variableCast: 4,
     fixedCast: 1.5,
     postCast: 0.5,
@@ -147,7 +147,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "picky-peck",
     name: "Picky Peck",
-    iconUrl: "https://browiki.org/images/7/71/Chilique_de_Picky.png",
+    iconUrl: "/skill-icons/picky-peck.png",
     variableCast: 1,
     fixedCast: 0,
     postCast: 1,
@@ -156,7 +156,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "soul-expansion",
     name: "Soul Expansion",
-    iconUrl: "https://browiki.org/images/f/f5/Impacto_Espiritual.png",
+    iconUrl: "/skill-icons/soul-expansion.png",
     variableCast: 2,
     fixedCast: 0,
     postCast: 0.5,
@@ -165,7 +165,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "axe-tornado",
     name: "Axe Tornado",
-    iconUrl: "https://irowiki.org/w/images/9/98/Axe_Tornado.png",
+    iconUrl: "/skill-icons/axe-tornado.png",
     variableCast: 0,
     fixedCast: 0,
     postCast: 0.5,
@@ -174,7 +174,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "vulcan-arm",
     name: "Vulcan Arm",
-    iconUrl: "https://irowiki.org/w/images/f/f3/Vulcan_Arm.png",
+    iconUrl: "/skill-icons/vulcan-arm.png",
     variableCast: 0.2,
     fixedCast: 0,
     postCast: 0.1,
@@ -183,7 +183,7 @@ export const skillPresets: SkillPreset[] = [
   {
     id: "arm-cannon",
     name: "Arm Cannon",
-    iconUrl: "https://irowiki.org/w/images/5/5f/Arm_Cannon.png",
+    iconUrl: "/skill-icons/arm-cannon.png",
     variableCast: 2,
     fixedCast: 0.1,
     postCast: 0.5,

@@ -15,7 +15,7 @@ type CalculatorInput = Omit<SkillTimingInput, "dex" | "int" | "magicStrings"> & 
 type NumericField = keyof CalculatorInput;
 
 const CUSTOM_SKILL_ID = "custom-skill";
-const CUSTOM_SKILL_ICON_URL = "https://irowiki.org/w/images/e/ed/Basic_Skill.png";
+const CUSTOM_SKILL_ICON_URL = "/skill-icons/custom-skill.png";
 const skillTimingFields: NumericField[] = ["variableCast", "fixedCast", "postCast", "cooldown"];
 
 const initialInput: CalculatorInput = {
@@ -510,7 +510,7 @@ export default function DpsCalculator() {
                 aria-hidden="true"
                 className="magicStringsIcon"
                 height={20}
-                src="https://irowiki.org/w/images/c/c0/Magic_Strings.png"
+                src="/skill-icons/magic-strings.png"
                 width={20}
               />
               <span>Magic Strings</span>
