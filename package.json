@@ -2,7 +2,7 @@
   "name": "ragnarok-dps-calculator",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@12.9.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,5 +19,9 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=24.21.0 <25",
+    "pnpm": "12.9.1"
   }
 }
